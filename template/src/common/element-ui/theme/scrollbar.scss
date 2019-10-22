@@ -1,0 +1,6 @@
+@include b(scrollbar) {
+    @include e(wrap) {
+        overflow: auto;
+        padding-bottom: 6px; // 自定义scrollbar样式后导致顶部边距失效
+    }
+}

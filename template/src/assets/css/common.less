@@ -1,0 +1,56 @@
+@import "../../common/css/common.less";
+
+.v-base-layout {
+    > .el-aside {
+        background: #f7faff;
+        .el-tree {
+            background: transparent;
+        }
+        .el-tree-node__content:hover {
+            background: #eefaff;
+        }
+        .el-tree--highlight-current{
+            .el-tree-node.is-current {
+                > .el-tree-node__content {
+                    background-color: #e6f7ff;
+                    .el-tree-node__label {
+                        color: @color-primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.el-tooltip__popper {
+    max-width: 90%;
+    word-break: break-word;
+}
+
+.scroll-body::-webkit-scrollbar {
+    width: 6px;
+    background: rgba(121, 121, 121, 0.1);
+    border-radius: 5px;
+}
+
+.scroll-body::-webkit-scrollbar-thumb {
+    width: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.scroll-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+a {
+    text-decoration: none;
+    &,
+    &:visited,
+    &:active {
+        color: @color-primary;
+    }
+    &:hover {
+        color: @color-primary * .9;
+    }
+}

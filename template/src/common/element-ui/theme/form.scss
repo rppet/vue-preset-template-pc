@@ -1,0 +1,53 @@
+@include b(form-item) {
+    @include e(label) {
+        font-size: $--font-size-base;
+        color: #666;
+    }
+    @include e(content) {
+        font-size: $--font-size-base;
+        color: #333;
+    }
+    @include m(label-left) {
+        & .el-form-item__label {
+        }
+    }
+    @include m(mini) {
+        .el-form-item__label {
+            line-height: 32px;
+        }
+        .el-form-item__content {
+            line-height: 32px;
+        }
+        &.el-form-item {
+            margin-bottom: 18px;
+        }
+        .el-form-item__error {
+            padding-top: 1px;
+        }
+    }
+    @include when(required) {
+        .el-form-item__label:before {
+            line-height: 0;
+            vertical-align: -6px;
+            font-size: 20px;
+        }
+    }
+}
+
+.el-form--label-left {
+    @include b(form-item) {
+      @include when(required) {
+          .el-form-item__label:before {
+              display: none;
+          }
+          .el-form-item__label:after {
+              content: '*';
+              color: $--color-danger;
+              margin-left: 4px;
+              line-height: 0;
+              vertical-align: -6px;
+              font-size: 20px;
+          }
+      }
+    }
+}

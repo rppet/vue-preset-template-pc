@@ -1,0 +1,22 @@
+@include b(breadcrumb) {
+    font-size: $--font-size-base;
+    margin-bottom: 20px;
+    @include e(item) {
+        @include e(inner) {
+            &.is-link, & a {
+                font-weight: 400;
+                color: $--color-text-regular;
+            }
+        }
+        &:last-child {
+            .el-breadcrumb__inner,
+            .el-breadcrumb__inner a {
+                &, &:hover {
+                    font-weight: normal;
+                    color: $--color-text-secondary;
+                    cursor: text;
+                }
+            }
+        }
+    }
+}

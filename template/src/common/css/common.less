@@ -1,0 +1,152 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    outline: 0;
+}
+*::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+}
+*::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(117, 117, 117, 0.3);
+    background: rgba(121, 121, 121, 0.1);
+    //border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    width: 6px;
+    background: rgba(128, 128, 128, 0.4);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(128, 128, 128, 0.6);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    //font-family: -apple-system, BlinkMacSystemFont, Helvetica, 'Avenir', Arial, sans-serif;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+        Microsoft YaHei, SimSun, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size-adjust: none;
+    color: #000;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+ul,
+li,
+p {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+input,
+textarea {
+    -webkit-appearance: none;
+    outline: none;
+    &:focus {
+        outline: none;
+    }
+}
+input, textarea, select, button {
+    font: inherit;
+}
+[v-cloak] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    &,
+    &:visited,
+    &:active {
+        color: @color-primary;
+    }
+    &:hover {
+        color: @color-primary * 0.9;
+    }
+}
+
+/* 清除浮动 */
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.el-dialog {
+    .h-dialog-form-footer {
+        margin: 0;
+        text-align: right;
+    }
+}
+.app-main-header-hospital {
+    padding: 0 20px;
+    box-sizing: content-box;
+    box-shadow: 0 1px 5px #eee;
+    border-bottom: 1px solid #e6e6e6;
+}
+.app-main-menu-hospital {
+    padding: 0 !important;
+    border: none;
+    .el-submenu__title {
+        padding: 0 8px;
+    }
+    .el-menu-item, .el-submenu__title {
+        font-size: 16px;
+    }
+    .el-menu--popup {
+        .el-menu-item {
+            font-size: 14px;
+        }
+    }
+}
+.el-menu--horizontal {
+    .el-menu-item-group {
+        max-width: 400px;
+        min-width: 260px;
+        /deep/
+        .el-menu-item-group__title {
+            position: relative;
+            margin-left: -20px;
+            padding-bottom: 0;
+            font-size: 12px;
+            color: #999;
+            &:before {
+                position: absolute;
+                content: '';
+                height: 12px;
+                top: 10px;
+                left: 32px;
+                width: 2px;
+                border-radius: 2px;
+                background: #00a1ff;
+            }
+        }
+        /deep/
+        ul {
+            overflow: hidden;
+            padding: 0 10px;
+            .el-menu-item {
+                float: left;
+                font-size: 14px;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}
