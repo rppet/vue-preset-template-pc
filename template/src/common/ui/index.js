@@ -17,7 +17,7 @@
 'use strict';
 
 import Dialog from './dialog/index';
-import ListView, {addListviewPlugin} from './listview/listview.vue';
+import ListView, { addListviewPlugin } from './listview/listview.vue';
 import SelectTree from './select-tree/select-tree.vue';
 
 import AttrContainer from './attr/attr-container.vue';

@@ -42,13 +42,14 @@
             <slot :row="tags" :is-popover-shown="isPopoverShown">
                 <div class="h-select-tree-wrap" :class="{clearable: clearable && tags.length}">
                     <div class="h-select-tree-text" v-if="tags.length">
-                        <el-tag v-if="multiple"
-                                v-for="tag in tags"
-                                :key="tag.value"
-                                disable-transitions
-                                closable
-                                @close="handleTagClose(tag.value)"
-                                type="info">{{tag.label}}</el-tag>
+                        <template v-if="multiple">
+                            <el-tag v-for="tag in tags"
+                                    :key="tag.value"
+                                    disable-transitions
+                                    closable
+                                    @close="handleTagClose(tag.value)"
+                                    type="info">{{tag.label}}</el-tag>
+                        </template>
                         <div class="h-select-tree-text-inner" v-else>{{tags[0].label}}</div>
                     </div>
                     <div class="h-select-tree-placeholder" v-else>{{placeholder}}</div>
