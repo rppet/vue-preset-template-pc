@@ -31,7 +31,7 @@ Vue.use(VueAxios, router, {
 Vue.use(Console);
 Vue.use(MyUI, store, router);
 
-Vue.config.productionTip = process.env.NODE_PATH === 'development';
+Vue.config.productionTip = process.env.NODE_ENV === 'development';
 
 new Vue({
     router,
